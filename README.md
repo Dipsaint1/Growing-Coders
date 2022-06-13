@@ -1,4 +1,4 @@
-# Weather-App
+Single Page Application for showing programs offered by the Growing Coders 
 Develop a single page application that lists all the courses available for the growingCoders
 programme offered by Osigla Consulting Limited.
 
