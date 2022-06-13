@@ -17,7 +17,11 @@ filtered. See UI design below:
 
 
 Acceptance Criteria
+
 • The segment below should be a separate component
+
 • On page load, all courses should be displayed without filtering
+
 • The filter dropdown should work
+
 • Colours must be accurate
