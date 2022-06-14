@@ -4,7 +4,6 @@ import Header from "./components/Header";
 import Main from "./components/Main";
 import Form from "./components/Form";
 
-
 function App(){
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -26,7 +25,6 @@ function App(){
     })
     .then(checkResponseAndParse)
     .then((result) => {
-      console.log(result);
       setIsLoaded(true);
       setItems(result);
     })

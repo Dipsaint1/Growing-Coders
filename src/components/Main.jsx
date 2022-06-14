@@ -13,7 +13,7 @@ function Main({error, isLoaded, items}) {
             key={item._id}
             course={item.course}
             duration = {item.duration}
-            topics={items.topics}
+            topics={item.topics}
             tracks={item.tracks}
           />
         ))}

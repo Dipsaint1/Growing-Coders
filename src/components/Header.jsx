@@ -1,12 +1,15 @@
 import React from 'react';
-import codingImage from "../images/coding-image.jpg";
+import headerIcon from "../images/header-icon.jpg";
+import headerImage from "../images/lady.jpg";
 
 
 const Header = () => {
   return ( 
     <header>
-      <span className="header-icon">growing<span>Coders</span></span>
-      <img src={codingImage} alt="headerImage" />
+      
+      <img className="header-icon" src={headerIcon} alt="headerImage" />
+      <span className='header-text'> Learn Tech Skills For Free!</span>
+      <img className="header-image" src={headerImage} alt="headerImage" />
     </header>
   );
 }
