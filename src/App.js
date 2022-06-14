@@ -8,12 +8,20 @@ function App(){
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
+  const [track, setTrack] = useState("beginner");
+  const [filteredTracks, setFilteredTracks] = useState([]);
+
   const proxyUrl = "https://corsanywhere.herokuapp.com/";
 
   const checkResponseAndParse = (response) => {
     if(!response.ok)   throw new Error(response.status);
     return response.json();
   }
+
+  useEffect(() => {
+    if(track === "beginner") setFilteredTracks(items.filter(item => item.tracks.includes(track)));
+    else if(track === "intermediate") setFilteredTracks(items.filter(item => item.tracks.includes(track)));
+  }, [items, track])
 
   useEffect(() => {
     fetch(`${proxyUrl}https://osigla.com.ng/api/growingCoders/courses.json`, {
@@ -33,7 +41,7 @@ function App(){
       setError(error)
     });
 
-  }, [])
+  }, []);
 
   
   return(
@@ -41,11 +49,14 @@ function App(){
       <Header/>
       <section className="programs container-fluid" id='programs'>
         <div className="container-lg">
-          <Form />
+          <Form 
+            setTrack={setTrack}
+          />
           <Main
             error={error}
             isLoaded={isLoaded}
             items={items}
+            filteredTracks={filteredTracks}
           />
         </div>
       </section>

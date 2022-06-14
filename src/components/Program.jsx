@@ -25,7 +25,7 @@ const Program = ({course, duration, topics, tracks}) => {
         }
       </div>
       <div className="program-details-container">
-        <span className="program-information">View Details</span>
+        <span className="program-details">View Details</span>
       </div>
     </div>
   );

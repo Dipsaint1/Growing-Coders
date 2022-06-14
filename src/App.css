@@ -9,7 +9,7 @@ header{
   background-color: rgb(5, 115, 165);
   color: white;
   position: relative;
-  border-bottom: 2px red solid;
+  border-bottom: 3px rgb(149, 34, 34) solid;
 }
 
 .header-text{
@@ -58,22 +58,37 @@ select {
   position: relative;
   overflow: hidden;
   padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+label{
+  left: 25%;
+  position: relative;
+  /* margin: 10px 0; */
+  margin-bottom: 10px;
+
 }
 
 select{
+  position: relative;
   color: black;
   font-family: "Poppins", sans-serif;
   cursor: pointer;
-  width: 100%;
+  width: 50%;
   height: 40px;
+  /* text-align: center; */
+  display: flex;
+  left: 25%;
 }
 
 /* Arrow */
 .select::after {
   content: "\25BC";
   position: absolute;
-  top: 50%;
-  right: 0;
+  top: 60%;
+  right: 25%;
   color: black;
   padding: 0 1rem;
   cursor: pointer;
@@ -114,7 +129,15 @@ select{
   width: 100%;
   align-items: center;
 }
-
+.program-details{
+  color: rgb(149, 34, 34);
+  border: 1px solid rgb(149, 34, 34);
+  border-radius: 7px;
+  padding: 5px 12px;
+  background-color: white;
+  text-align: end;
+  cursor: pointer;
+}
 option{
   padding: 5px 0;
 }
