@@ -1,14 +1,25 @@
-import React from 'react';
-import Program from "../components/Program";
+import React, {useState} from 'react';
+import Program from "./Program";
+import Pagination from './common/Pagination';
+import paginate from "../utils/paginate";
 
-function Main({error, isLoaded, items, filteredTracks}) {
+
+function Main({error, isLoaded, filteredTracks, currentPage, setCurrentPage}) {
+  const [pageSize, setPageSize] = useState(5);
+
+  const Tracks = paginate(filteredTracks, currentPage, pageSize);
+
+  const pageChangeHandler = (page) => {
+    setCurrentPage(page);
+  }
   
   if (error) return (<div>Error: {error.message}</div>);
   else if (!isLoaded) return (<div>Loading...</div>);
   else {
     return (
-      <div className="container-fluid">
-        {filteredTracks.map(item => (
+      <main className="container-fluid">
+        {/* Render Tracks due to pagination */}
+        {Tracks.map(item => (
           <Program
             key={item._id}
             course={item.course}
@@ -17,8 +28,15 @@ function Main({error, isLoaded, items, filteredTracks}) {
             tracks={item.tracks}
           />
         ))}
-      </div>
-    );
+
+        <Pagination
+          itemsCount={filteredTracks.length}
+          pageSize={pageSize}
+          onPageChange={pageChangeHandler}
+          currentPage={currentPage}
+        />
+      </main>
+    ); 
   }
 }
 

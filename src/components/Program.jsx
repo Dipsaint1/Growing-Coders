@@ -13,7 +13,7 @@ const Program = ({course, duration, topics, tracks}) => {
   return ( 
     <div className="program-container">
       <div className="program">
-        <strong>{course}</strong>
+        <strong className="course">{course}</strong>
         <span className="duration">{duration} <br /><small>Duration</small></span>
       </div>
       <div className="topics-container">
