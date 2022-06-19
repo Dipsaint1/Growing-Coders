@@ -5,10 +5,10 @@ import paginate from "../utils/paginate";
 
 
 function Main({error, isLoaded, filteredTracks, currentPage, setCurrentPage}) {
-  const [pageSize, setPageSize] = useState(5);
+  const [pageSize, setPageSize] = useState(5);   // Set initial condition for pagination
 
   const Tracks = paginate(filteredTracks, currentPage, pageSize);
-
+  
   const pageChangeHandler = (page) => {
     setCurrentPage(page);
   }

@@ -1,0 +1,158 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header{
+  height: 200px;
+  background-color: rgb(5, 115, 165);
+  color: white;
+  position: relative;
+  border-bottom: 3px rgb(187, 9, 9) solid;
+}
+
+.header-text{
+  position: absolute;
+  top: 85px;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "poppins", serif;
+  z-index: 9;
+}
+
+.header-icon{
+  width: 170px;
+  height: 25px;
+  background-color: transparent;
+  margin-top: 25px;
+  margin-left: 40px;
+}
+.header-image{
+  width: 140px;
+  height: 120px;
+  position: absolute;
+  right: 10%;
+  bottom: 0;
+}
+
+/*CUSTOM SELECTOR */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 1px solid black !important;
+  background-image: none;
+  background-color: transparent;
+}
+
+/* Custom Select */
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+
+label{
+  left: 30%;
+  position: relative;
+  margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+}
+
+select{
+  position: relative;
+  color: black;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  width: 40%;
+  height: 40px;
+  display: flex;
+  left: 30%;
+}
+
+/* Arrow */
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 57%;
+  right: 30%;
+  color: black;
+  padding: 0 1rem;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.filter-tracks {
+  padding: 0 1rem;
+}
+
+/* main{
+  margin-bottom: 70px;
+} */
+
+section{
+  margin-bottom: 100px;
+}
+
+
+.program-container{
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  background-color: whitesmoke;
+  margin: 10px 0;
+  border-radius: 7px;
+  font-family: "Poppins", sans-serif;
+}
+
+.program, .topics-container, .tracks-container{
+  flex-basis: 20%;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  position: relative;
+}
+.course{
+  color: rgb(5, 115, 165);
+}
+.topics, .track{
+  position: absolute;
+  bottom: 0;
+}
+.tracks-container{
+  flex-basis: 40%;
+}
+
+.program-details-container{
+  flex-basis: 20%;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.program-details{
+  color: rgb(187, 9, 9);
+  border: 1px solid rgb(187, 9, 9);
+  border-radius: 7px;
+  padding: 5px 12px;
+  background-color: white;
+  text-align: end;
+  cursor: pointer;
+}
+option{
+  padding: 5px 0;
+  font-family: "Poppins", sans-serif;
+}
+
